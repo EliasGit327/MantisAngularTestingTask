@@ -1,0 +1,14 @@
+.mat-drawer-container {
+  height: 100%;
+}
+
+.mat-header {
+  position: sticky;
+  position: -webkit-sticky; /* For macOS/iOS Safari */
+  top: 0;
+  z-index: 10;
+}
+
+.without-header {
+  height: calc(100% - 64px);
+}
