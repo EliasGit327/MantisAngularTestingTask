@@ -24,7 +24,8 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.css"
+              "./node_modules/@angular/material/prebuilt-themes/indigo-pink.css",
+              "src/styles.scss"
             ],
             "scripts": []
           },
@@ -88,7 +89,8 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.css"
+              "./node_modules/@angular/material/prebuilt-themes/indigo-pink.css",
+              "src/styles.scss"
             ],
             "scripts": []
           }
@@ -119,6 +121,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "MantisAngularTestingTask"
+    }
+  },
+  "defaultProject": "MantisAngularTestingTask",
+  "cli": {
+    "analytics": "f2653c3e-c055-4426-b359-9121555e85d0"
+  }
 }

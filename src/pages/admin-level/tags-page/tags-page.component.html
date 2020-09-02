@@ -1,0 +1,38 @@
+<mat-card style="margin: 15px" class="mat-elevation-z6">
+
+    <div style="display: flex; flex: 1; flex-direction: row; justify-content: space-between">
+      <mat-card-title>
+        Tags
+      </mat-card-title>
+
+        <button mat-mini-fab color="primary">
+          <mat-icon>add</mat-icon>
+        </button>
+    </div>
+
+
+  <mat-card-content>
+    <div style="margin-top: 15px">
+
+    <mat-chip-list>
+      <mat-chip *ngFor="let tag of tags; index as i" (click)="onChipClick(tag, menu)"
+                [matMenuTriggerFor]="menu">
+        {{tag.label}}
+
+        <mat-menu #menu="matMenu" style="margin-top: 15px">
+          <button mat-menu-item>
+            <mat-icon>edit</mat-icon>
+            <span>Edit</span>
+          </button>
+          <button mat-menu-item (click)="removeTag(i)">
+            <mat-icon>delete</mat-icon>
+            <span>Remove</span>
+          </button>
+        </mat-menu>
+      </mat-chip>
+
+    </mat-chip-list>
+
+    </div>
+  </mat-card-content>
+</mat-card>
