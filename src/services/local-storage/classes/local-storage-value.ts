@@ -17,6 +17,8 @@ export class LocalStorageValue {
     this.stringify = parameters.stringify;
   }
 
+  public removeValue: () => void = () => window.localStorage.removeItem(this.key);
+
   set value(value: any) {
     let valueInput = value;
     if (this.stringify) {

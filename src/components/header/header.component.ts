@@ -1,5 +1,8 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { SideNavService } from '../../services/side-nav-service/side-nav.service';
+import { MatDialog } from '@angular/material/dialog';
+import { LoginDialogComponent } from '../login-dialog/login-dialog.component';
+import { AuthService } from '../../services/auth-service/auth.service';
 
 @Component({
   selector: 'app-header',
@@ -19,4 +22,5 @@ export class HeaderComponent implements OnInit {
   toggleSideNav(): void {
     this.sideNavService.drawer.toggle();
   }
+
 }

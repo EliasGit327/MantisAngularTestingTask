@@ -6,12 +6,16 @@ import { MaterialModule } from '../modules/material.module';
 import { SidebarComponent } from './sidebar/sidebar.component';
 import { RouterModule } from '@angular/router';
 import { FormsModule } from '@angular/forms';
+import { LoginDialogComponent } from './login-dialog/login-dialog.component';
+import { LoginMenuComponent } from './header/components/login-menu/login-menu.component';
 
 @NgModule({
   declarations: [
     ThemePickerComponent,
     HeaderComponent,
     SidebarComponent,
+    LoginDialogComponent,
+    LoginMenuComponent,
   ],
   imports: [
     CommonModule,
@@ -23,6 +27,9 @@ import { FormsModule } from '@angular/forms';
     ThemePickerComponent,
     HeaderComponent,
     SidebarComponent,
+  ],
+  entryComponents: [
+    LoginDialogComponent
   ]
 })
 export class ComponentsModule { }

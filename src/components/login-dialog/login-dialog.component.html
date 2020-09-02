@@ -1,0 +1,37 @@
+<h2>Login</h2>
+
+<form [formGroup]="loginForm" (ngSubmit)="onLogin()" style="display: flex; flex-direction: column">
+
+  <mat-form-field appearance="outline">
+    <mat-label>Enter Username</mat-label>
+    <input matInput placeholder="Username" formControlName="username">
+    <mat-hint>5 symbols minimum</mat-hint>
+    <mat-error *ngIf="loginForm.controls.username.invalid">
+      Username is required, minimum 5 symbols
+    </mat-error>
+  </mat-form-field>
+
+  <mat-form-field appearance="outline" style="margin-top: 10px">
+    <mat-label>Enter Password</mat-label>
+    <input matInput placeholder="Password" formControlName="password" type="Password">
+    <mat-hint>5 symbols minimum</mat-hint>
+    <mat-error *ngIf="loginForm.controls.password.invalid">
+      Password is required, minimum 5 symbols
+    </mat-error>
+
+  </mat-form-field>
+
+  <div style="margin-top: 10px">
+    <button mat-raised-button
+            matTooltip="Info about the action"
+            type="submit" [disabled]="loginForm.invalid"
+    >Login</button>
+  </div>
+</form>
+
+<mat-divider style="margin-top: 25px"></mat-divider>
+
+<p style="margin-top: 20px">
+  You can write any text as login and password.
+</p>
+

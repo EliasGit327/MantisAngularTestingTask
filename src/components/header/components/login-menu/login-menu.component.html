@@ -1,0 +1,16 @@
+<button mat-icon-button [matMenuTriggerFor]="accMenu">
+  <mat-icon>
+    account_circle
+  </mat-icon>
+</button>
+<mat-menu #accMenu="matMenu">
+    <span *ngIf="!authService.jwtToken; else logged">
+    <button mat-menu-item (click)="openLoginDialog()">Log in</button>
+    </span>
+  <ng-template #logged>
+      <span mat-menu-item>
+        <p>{{authService.username}}</p>
+      </span>
+    <button mat-menu-item (click)="logOut()">Log out</button>
+  </ng-template>
+</mat-menu>

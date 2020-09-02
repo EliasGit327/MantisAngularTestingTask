@@ -13,7 +13,8 @@ export class LocalStorageService {
       return searchResult !== null && searchResult !== undefined;
     }
   });
-
+  public jwtToken: LocalStorageValue = new LocalStorageValue( { key: 'jwtToken' });
+  public userName: LocalStorageValue = new LocalStorageValue( { key: 'userName' });
 
   constructor() {}
 }

@@ -12,6 +12,9 @@ import { MatChipsModule } from '@angular/material/chips';
 import { MatListModule } from '@angular/material/list';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
+import { MatDialogModule } from '@angular/material/dialog';
+import { ReactiveFormsModule } from '@angular/forms';
+import { MatBadgeModule } from '@angular/material/badge';
 
 @NgModule({
   declarations: [],
@@ -28,7 +31,11 @@ import { MatInputModule } from '@angular/material/input';
     MatChipsModule,
     MatListModule,
     MatFormFieldModule,
-    MatInputModule
+    MatInputModule,
+    MatDialogModule,
+    ReactiveFormsModule,
+    MatDividerModule,
+    MatBadgeModule
   ],
   exports: [
     MatButtonModule,
@@ -42,7 +49,11 @@ import { MatInputModule } from '@angular/material/input';
     MatChipsModule,
     MatListModule,
     MatFormFieldModule,
-    MatInputModule
+    MatInputModule,
+    MatDialogModule,
+    ReactiveFormsModule,
+    MatDividerModule,
+    MatBadgeModule
   ]
 })
 export class MaterialModule { }

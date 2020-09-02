@@ -4,11 +4,12 @@ import { RouterModule, Routes } from '@angular/router';
 import { HomePageComponent } from './any-level/home-page/home-page.component';
 import { NotFoundPageComponent } from './any-level/not-found-page/not-found-page.component';
 import { TagsPageComponent } from './admin-level/tags-page/tags-page.component';
+import { LoginActivateGuard } from './login-activate.guard';
 
 const routes: Routes = [
   { path: 'home', component: HomePageComponent },
   { path: 'not-found', component: NotFoundPageComponent },
-  { path: 'tags', component: TagsPageComponent },
+  { path: 'tags', component: TagsPageComponent, canActivate: [LoginActivateGuard] },
   { path: '', redirectTo: 'home', pathMatch: 'full' },
   { path: '**', redirectTo: 'not-found', }
 ];
