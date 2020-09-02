@@ -9,6 +9,9 @@ import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatDividerModule } from '@angular/material/divider';
 import { MatCardModule } from '@angular/material/card';
 import { MatChipsModule } from '@angular/material/chips';
+import { MatListModule } from '@angular/material/list';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatInputModule } from '@angular/material/input';
 
 @NgModule({
   declarations: [],
@@ -23,6 +26,9 @@ import { MatChipsModule } from '@angular/material/chips';
     MatDividerModule,
     MatCardModule,
     MatChipsModule,
+    MatListModule,
+    MatFormFieldModule,
+    MatInputModule
   ],
   exports: [
     MatButtonModule,
@@ -33,7 +39,10 @@ import { MatChipsModule } from '@angular/material/chips';
     MatSidenavModule,
     MatDividerModule,
     MatCardModule,
-    MatChipsModule
+    MatChipsModule,
+    MatListModule,
+    MatFormFieldModule,
+    MatInputModule
   ]
 })
 export class MaterialModule { }
