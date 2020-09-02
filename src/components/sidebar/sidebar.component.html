@@ -7,5 +7,15 @@
       </span>
     </div>
   </mat-list-option>
+</mat-selection-list>
 
+<mat-selection-list #linkList [multiple]="false" [(ngModel)]="selectedLink" *ngIf="authService.jwtToken">
+  <mat-list-option *ngFor="let link of loggedInLinks" [value]="link">
+    <div style="display: flex;align-items: center;}">
+      <mat-icon *ngIf="link.iconName">{{link.iconName}}</mat-icon>
+      <span style="margin-left: 5px;">
+        {{link.label}}
+      </span>
+    </div>
+  </mat-list-option>
 </mat-selection-list>

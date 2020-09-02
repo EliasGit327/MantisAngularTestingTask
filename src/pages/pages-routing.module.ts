@@ -1,18 +1,15 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule, Routes } from '@angular/router';
-import { HomePageComponent } from './any-level/home-page/home-page.component';
-import { NotFoundPageComponent } from './any-level/not-found-page/not-found-page.component';
-import { TagsPageComponent } from './admin-level/tags-page/tags-page.component';
-import { LoginActivateGuard } from './login-activate.guard';
+import { HomePageComponent } from './guest-level/home-page/home-page.component';
+import { NotFoundPageComponent } from './guest-level/not-found-page/not-found-page.component';
 
 const routes: Routes = [
+  { path: 'tags', loadChildren: () => import('./auth-level/tags-page/tags.module').then(m => m.TagsModule) },
   { path: 'home', component: HomePageComponent },
   { path: 'not-found', component: NotFoundPageComponent },
-  { path: 'tags', component: TagsPageComponent, canActivate: [LoginActivateGuard] },
   { path: '', redirectTo: 'home', pathMatch: 'full' },
-  { path: '**', redirectTo: 'not-found', }
-];
+  { path: '**', redirectTo: 'not-found' }, ];
 
 @NgModule({
   declarations: [],
@@ -25,4 +22,4 @@ const routes: Routes = [
   ]
 })
 
-export class PagesRoutingModule { }
+export class PagesRoutingModule {}

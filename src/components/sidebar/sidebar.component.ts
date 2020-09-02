@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { MatListOption } from '@angular/material/list';
 import { ILink } from './interfaces/ilink';
+import { AuthService } from '../../services/auth-service/auth.service';
 
 @Component({
   selector: 'app-sidebar',
@@ -11,7 +12,9 @@ import { ILink } from './interfaces/ilink';
 export class SidebarComponent implements OnInit {
   links: ILink[] = [
     { label: 'Home', route: '/home', iconName: 'home'},
-    { label: 'Tags', route: '/tags', iconName: 'label'},
+  ];
+  loggedInLinks: ILink[] = [
+    { label: 'Tags', route: '/tags', iconName: 'label' }
   ];
   currentLink: ILink;
   set selectedLink(value: ILink) {
@@ -23,6 +26,7 @@ export class SidebarComponent implements OnInit {
   }
 
   constructor(
+    public authService: AuthService,
     private router: Router
   ) { }
 
