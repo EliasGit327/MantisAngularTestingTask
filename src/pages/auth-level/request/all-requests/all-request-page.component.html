@@ -1,42 +1,42 @@
 <div style="margin: 25px; display: flex; flex-direction: column;">
-  <div class="blue-container flex-row">
+  <mat-card style="background-color: hsla(210, 100%, 56%, 0.4);" class="mat-elevation-z6 flex-row">
     <button mat-raised-button (click)="navigateToRequestPage('get')"
-            style="background-color: #1e90ff; flex: 1; color: white">
+            style="background-color: #1e90ff; min-width: 125px; color: white">
       GET
     </button>
-    <mat-card style="display: flex; flex: 12; margin-left: 10px;" class="transparent-card mat-elevation-z0">
+    <div style="display: flex; margin-left: 10px" class="vertical-center-text">
       Go to 'GET' request page
-    </mat-card>
-  </div>
+    </div>
+  </mat-card>
 
-  <div class="green-container flex-row" style="margin-top: 10px">
-    <button mat-raised-button (click)="navigateToRequestPage('post')"
-            style="background-color: #2e8b57; flex: 1; color: white">
+  <mat-card style="background-color: hsla(146, 50%, 36%, 0.3); margin-top: 15px" class="mat-elevation-z6 flex-row">
+  <button mat-raised-button (click)="navigateToRequestPage('post')"
+            style="background-color: #2e8b57; min-width: 125px; color: white">
       POST
     </button>
-    <mat-card style="display: flex; flex: 12; margin-left: 10px;" class="transparent-card mat-elevation-z0">
+    <div style="display: flex; margin-left: 10px" class="vertical-center-text">
       Go to 'POST' request page
-    </mat-card>
-  </div>
+    </div>
+  </mat-card>
 
-  <div class="orange-container flex-row" style="margin-top: 10px">
-    <button mat-raised-button (click)="navigateToRequestPage('put')"
-            style="background-color: #ff8c00; flex: 1; color: white">
+  <mat-card style="background-color: hsla(33, 100%, 50%, 0.3); margin-top: 15px" class="mat-elevation-z6 flex-row">
+  <button mat-raised-button (click)="navigateToRequestPage('put')"
+            style="background-color: #ff8c00; min-width: 125px; color: white">
       PUT
     </button>
-    <mat-card style="display: flex; flex: 12; margin-left: 10px;" class="transparent-card mat-elevation-z0">
+    <div style="display: flex; margin-left: 10px" class="vertical-center-text">
       Go to 'PUT' request page
-    </mat-card>
-  </div>
+    </div>
+  </mat-card>
 
-  <div class="red-container flex-row" style="margin-top: 10px">
-    <button mat-raised-button (click)="navigateToRequestPage('delete')"
-            style="background-color: #ff0000; flex: 1; color: white">
+  <mat-card style="background-color: hsla(0, 100%, 50%, 0.3); margin-top: 15px" class="mat-elevation-z6 flex-row">
+  <button mat-raised-button (click)="navigateToRequestPage('delete')"
+            style="background-color: #ff0000; min-width: 125px; color: white">
       DELETE
     </button>
-    <mat-card style="display: flex; flex: 12; margin-left: 10px;" class="transparent-card mat-elevation-z0">
+    <div style="display: flex; margin-left: 10px" class="vertical-center-text">
       Go to 'DELETE' request page
-    </mat-card>
-  </div>
+    </div>
+  </mat-card>
 
 </div>

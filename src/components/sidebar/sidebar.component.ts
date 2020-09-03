@@ -13,7 +13,9 @@ export class SidebarComponent implements OnInit {
   links: ILink[] = [
     { label: 'Home', route: '/home', iconName: 'home'},
   ];
+
   loggedInLinks: ILink[] = [
+    { label: 'Dashboard', route: '/dashboard', iconName: 'dashboard' },
     { label: 'Tags', route: '/tags', iconName: 'label' },
     { label: 'Request Testing', route: '/request', iconName: 'link' }
   ];
