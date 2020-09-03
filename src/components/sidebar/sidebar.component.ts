@@ -14,7 +14,8 @@ export class SidebarComponent implements OnInit {
     { label: 'Home', route: '/home', iconName: 'home'},
   ];
   loggedInLinks: ILink[] = [
-    { label: 'Tags', route: '/tags', iconName: 'label' }
+    { label: 'Tags', route: '/tags', iconName: 'label' },
+    { label: 'Request Testing', route: '/request', iconName: 'link' }
   ];
   currentLink: ILink;
   set selectedLink(value: ILink) {

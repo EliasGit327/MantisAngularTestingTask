@@ -5,12 +5,22 @@ import { NotFoundPageComponent } from './guest-level/not-found-page/not-found-pa
 import { MaterialModule } from '../modules/material.module';
 import { TagsPageComponent } from './auth-level/tags-page/tags-page.component';
 import { MatFormFieldModule } from '@angular/material/form-field';
+import { AllRequestPageComponent } from './auth-level/request/all-requests/all-request-page.component';
+import { GetRequestPageComponent } from './auth-level/request/get-request-page/get-request-page.component';
+import { PostRequestPageComponent } from './auth-level/request/post-request-page/post-request-page.component';
+import { PutRequestPageComponent } from './auth-level/request/put-request-page/put-request-page.component';
+import { DashboardPageComponent } from './auth-level/dashboard/dashboard-page/dashboard-page.component';
 
 @NgModule({
   declarations: [
     HomePageComponent,
     NotFoundPageComponent,
     TagsPageComponent,
+    AllRequestPageComponent,
+    GetRequestPageComponent,
+    PostRequestPageComponent,
+    PutRequestPageComponent,
+    DashboardPageComponent,
   ],
   imports: [
     CommonModule,

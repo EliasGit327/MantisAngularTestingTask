@@ -1,0 +1,45 @@
+.blue-container {
+  padding: 10px;
+  background-color: hsla(210, 100%, 56%, 0.2);
+  border-radius: 10px;
+  border-width: 1px;
+  border-color: hsla(210, 100%, 56%, 1);
+  border-style: solid;
+}
+
+.green-container {
+  padding: 10px;
+  background-color: hsla(146, 50%, 36%, 0.2);
+  border-radius: 10px;
+  border-width: 1px;
+  border-color: hsla(146, 50%, 36%, 1);
+  border-style: solid;
+}
+
+.orange-container {
+  padding: 10px;
+  background-color: hsla(33, 100%, 50%, 0.2);
+  border-radius: 10px;
+  border-width: 1px;
+  border-color: hsla(33, 100%, 50%, 1);
+  border-style: solid;
+}
+
+.red-container {
+  padding: 10px;
+  background-color: hsla(0, 100%, 50%, 0.2);
+  border-radius: 10px;
+  border-width: 1px;
+  border-color: hsla(0, 100%, 50%, 1);
+  border-style: solid;
+}
+
+.flex-row {
+  display: flex;
+  flex-direction: row;
+}
+
+.transparent-card {
+  padding: 7px;
+  background-color: transparent;
+}
