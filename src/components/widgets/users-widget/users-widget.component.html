@@ -1,0 +1,70 @@
+<mat-card class="mat-elevation-z6">
+
+    <mat-card-content>
+      <div>
+        <div style="display: flex; flex-direction: row; align-items: center; justify-content: space-between">
+          <mat-icon color="primary" style="margin-right: 10px">group</mat-icon>
+
+          <mat-card-title style="vertical-align: bottom; margin: 0">
+            Users
+          </mat-card-title>
+
+          <button mat-icon-button>
+            <mat-icon>fullscreen</mat-icon>
+          </button>
+        </div>
+
+        <mat-card-subtitle style="margin-top: 10px">
+          I found that API has only 2 pages too late...
+        </mat-card-subtitle>
+
+
+        <div class="mat-elevation-z10">
+          <table mat-table [dataSource]="dataSource" style="min-width: 466px">
+
+            <ng-container matColumnDef="id">
+              <th mat-header-cell *matHeaderCellDef> ID</th>
+              <td mat-cell *matCellDef="let element"> #{{element.id}} </td>
+            </ng-container>
+
+            <ng-container matColumnDef="first_name">
+              <th mat-header-cell *matHeaderCellDef> First name</th>
+              <td mat-cell *matCellDef="let element"> {{element.first_name}} </td>
+            </ng-container>
+
+            <ng-container matColumnDef="last_name">
+              <th mat-header-cell *matHeaderCellDef> First name</th>
+              <td mat-cell *matCellDef="let element"> {{element.last_name}} </td>
+            </ng-container>
+
+            <ng-container matColumnDef="email">
+              <th mat-header-cell *matHeaderCellDef> Email</th>
+              <td mat-cell *matCellDef="let element"> {{element.email}} </td>
+            </ng-container>
+
+            <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+            <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+          </table>
+
+          <div style="display: flex; justify-content: center; align-items: center;">
+            <mat-spinner *ngIf="isLoading" ></mat-spinner>
+          </div>
+
+          <div style="display: flex; flex-direction: row; justify-content: space-between; align-items: baseline">
+            <button mat-icon-button [disabled]="page <= 1" (click)="previousPageBtnClick()">
+              <mat-icon>keyboard_arrow_left</mat-icon>
+            </button>
+
+            <p>{{page}}</p>
+
+            <button mat-icon-button [disabled]="page >= 2" (click)="nextPageBtnClick()">
+              <mat-icon>keyboard_arrow_right</mat-icon>
+            </button>
+          </div>
+        </div>
+
+      </div>
+    </mat-card-content>
+
+
+</mat-card>

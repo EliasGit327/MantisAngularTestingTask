@@ -10,6 +10,7 @@ import { GetRequestPageComponent } from './auth-level/request/get-request-page/g
 import { PostRequestPageComponent } from './auth-level/request/post-request-page/post-request-page.component';
 import { PutRequestPageComponent } from './auth-level/request/put-request-page/put-request-page.component';
 import { DashboardPageComponent } from './auth-level/dashboard/dashboard-page/dashboard-page.component';
+import { ComponentsModule } from '../components/components.module';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { DashboardPageComponent } from './auth-level/dashboard/dashboard-page/da
   imports: [
     CommonModule,
     MaterialModule,
-    MatFormFieldModule
+    MatFormFieldModule,
+    ComponentsModule
   ],
   exports: [
     HomePageComponent,

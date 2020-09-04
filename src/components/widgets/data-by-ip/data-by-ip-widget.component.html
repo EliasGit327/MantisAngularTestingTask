@@ -1,0 +1,28 @@
+<mat-card class="mat-elevation-z6" style="min-width: 187px; min-height: 152px">
+  <div style="display: flex; justify-content: center; align-items: center;">
+    <mat-spinner *ngIf="isLoading" ></mat-spinner>
+  </div>
+
+  <mat-card-content>
+    <div *ngIf="!isLoading && data">
+      <div style="display: flex; flex-direction: row; align-items: center; justify-content: space-between">
+        <mat-icon color="primary" style="margin-right: 10px">dns</mat-icon>
+
+        <mat-card-title style="vertical-align: bottom; margin: 0">
+          Data by IP
+        </mat-card-title>
+
+        <button mat-icon-button>
+          <mat-icon>fullscreen</mat-icon>
+        </button>
+      </div>
+
+      <p>
+        City: {{data.city}}<br>
+        Country: {{data.country_name}}<br>
+        Latitude: {{data.latitude}}<br>
+        Longitude: {{data.longitude}}
+      </p>
+    </div>
+  </mat-card-content>
+</mat-card>

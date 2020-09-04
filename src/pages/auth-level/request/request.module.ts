@@ -7,12 +7,13 @@ import { GetRequestPageComponent } from './get-request-page/get-request-page.com
 import { PostRequestPageComponent } from './post-request-page/post-request-page.component';
 import { PutRequestPageComponent } from './put-request-page/put-request-page.component';
 import { DeleteRequestPageComponent } from './delete-request-page/delete-request-page.component';
+import { MaterialModule } from '../../../modules/material.module';
 
 const routes: Routes = [
   { path: '', component: AllRequestPageComponent, canActivate: [LoginActivateGuard] },
   { path: 'get', component: GetRequestPageComponent, canActivate: [LoginActivateGuard] },
   { path: 'post', component: PostRequestPageComponent, canActivate: [LoginActivateGuard] },
-  { path: 'update', component: PutRequestPageComponent, canActivate: [LoginActivateGuard] },
+  { path: 'put', component: PutRequestPageComponent, canActivate: [LoginActivateGuard] },
   { path: 'delete', component: DeleteRequestPageComponent, canActivate: [LoginActivateGuard] },
 ];
 
@@ -20,7 +21,8 @@ const routes: Routes = [
   declarations: [DeleteRequestPageComponent],
   imports: [
     CommonModule,
-    RouterModule.forChild(routes)
+    RouterModule.forChild(routes),
+    MaterialModule
   ],
   exports: [
     RouterModule

@@ -8,6 +8,9 @@ import { RouterModule } from '@angular/router';
 import { FormsModule } from '@angular/forms';
 import { LoginDialogComponent } from './login-dialog/login-dialog.component';
 import { LoginMenuComponent } from './header/components/login-menu/login-menu.component';
+import { DataByIpWidgetComponent } from './widgets/data-by-ip/data-by-ip-widget.component';
+import { CurrencyWidgetComponent } from './widgets/currency-widget/currency-widget.component';
+import { UsersWidgetComponent } from './widgets/users-widget/users-widget.component';
 
 @NgModule({
   declarations: [
@@ -16,17 +19,23 @@ import { LoginMenuComponent } from './header/components/login-menu/login-menu.co
     SidebarComponent,
     LoginDialogComponent,
     LoginMenuComponent,
+    DataByIpWidgetComponent,
+    CurrencyWidgetComponent,
+    UsersWidgetComponent,
   ],
   imports: [
     CommonModule,
     MaterialModule,
     RouterModule,
-    FormsModule
+    FormsModule,
   ],
   exports: [
     ThemePickerComponent,
     HeaderComponent,
     SidebarComponent,
+    DataByIpWidgetComponent,
+    CurrencyWidgetComponent,
+    UsersWidgetComponent,
   ],
   entryComponents: [
     LoginDialogComponent
