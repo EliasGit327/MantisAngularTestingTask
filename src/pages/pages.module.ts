@@ -11,6 +11,8 @@ import { PostRequestPageComponent } from './auth-level/request/post-request-page
 import { PutRequestPageComponent } from './auth-level/request/put-request-page/put-request-page.component';
 import { DashboardPageComponent } from './auth-level/dashboard/dashboard-page/dashboard-page.component';
 import { ComponentsModule } from '../components/components.module';
+import { PaginatedTablePageComponent } from './auth-level/paginated-table/paginated-table-page/paginated-table-page.component';
+import { PaginatedTableModule } from './auth-level/paginated-table/paginated-table.module';
 
 @NgModule({
   declarations: [
@@ -22,12 +24,14 @@ import { ComponentsModule } from '../components/components.module';
     PostRequestPageComponent,
     PutRequestPageComponent,
     DashboardPageComponent,
+    PaginatedTablePageComponent,
   ],
   imports: [
     CommonModule,
     MaterialModule,
     MatFormFieldModule,
-    ComponentsModule
+    ComponentsModule,
+    PaginatedTableModule
   ],
   exports: [
     HomePageComponent,

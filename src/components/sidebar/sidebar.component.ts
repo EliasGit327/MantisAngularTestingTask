@@ -16,7 +16,7 @@ export class SidebarComponent implements OnInit {
 
   loggedInLinks: ILink[] = [
     { label: 'Dashboard', route: '/dashboard', iconName: 'dashboard' },
-    { label: 'Tags', route: '/tags', iconName: 'label' },
+    { label: 'Paginated table', route: '/paginated-table', iconName: 'table_rows' },
     { label: 'Request Testing', route: '/request', iconName: 'link' }
   ];
   currentLink: ILink;

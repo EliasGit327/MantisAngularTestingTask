@@ -5,6 +5,9 @@ import { HomePageComponent } from './guest-level/home-page/home-page.component';
 import { NotFoundPageComponent } from './guest-level/not-found-page/not-found-page.component';
 
 const routes: Routes = [
+  { path: 'paginated-table', loadChildren: () =>
+      import('./auth-level/paginated-table/paginated-table.module').then(m => m.PaginatedTableModule)
+  },
   { path: 'dashboard', loadChildren: () => import('./auth-level/dashboard/dashboard.module').then(m => m.DashboardModule) },
   { path: 'request', loadChildren: () => import('./auth-level/request/request.module').then(m => m.RequestModule) },
   { path: 'tags', loadChildren: () => import('./auth-level/tags/tags.module').then(m => m.TagsModule) },
